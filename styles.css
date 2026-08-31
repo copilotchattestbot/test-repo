@@ -8,50 +8,65 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #e2e8f0;
+  font-family: Arial, sans-serif;
 }
 
 .game-container {
-  width: min(92vw, 520px);
+  position: relative;
+  width: 440px;
   text-align: center;
+  background: rgba(15, 23, 42, 0.9);
   padding: 24px;
-  border-radius: 20px;
-  background: rgba(15, 23, 42, 0.88);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 h1 {
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .hud {
   display: flex;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.score {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
   font-size: 1.1rem;
-  font-weight: 700;
 }
 
-.canvas-wrapper {
-  position: relative;
-  width: 400px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-canvas {
+#gameCanvas {
   display: block;
-  width: 100%;
-  height: auto;
-  background: #111827;
-  border: 3px solid #22c55e;
-  border-radius: 12px;
+  margin: 0 auto;
+  background: #020617;
+  border: 2px solid #38bdf8;
+  border-radius: 8px;
+}
+
+.instructions {
+  margin-top: 14px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #38bdf8;
+  color: #082f49;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #7dd3fc;
+}
+
+.hidden {
+  display: none;
 }
 
 .overlay {
@@ -60,40 +75,19 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
-}
-
-.overlay-card {
-  background: #0f172a;
-  padding: 24px;
+  background: rgba(2, 6, 23, 0.82);
   border-radius: 16px;
+}
+
+.overlay-content {
+  background: #0f172a;
+  padding: 24px 28px;
+  border-radius: 12px;
+  border: 1px solid #38bdf8;
   width: 80%;
-  max-width: 280px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-.hidden {
-  display: none;
-}
-
-button {
-  margin-top: 12px;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 999px;
-  background: #22c55e;
-  color: #052e16;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #4ade80;
-}
-
-.instructions {
-  margin-bottom: 0;
-  margin-top: 16px;
-  color: #cbd5e1;
+.overlay-content h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
